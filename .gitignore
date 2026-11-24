@@ -40,3 +40,22 @@ replay_*.log
 *.jfr
 .env
 *.log
+
+
+
+# Local configuration and credentials
+.env.*
+!.env.example
+secrets/
+*.pem
+*.key
+
+# PRP experiments and local test data
+lab-data/
+test-output/
+local-config/
+*.log.*
+
+# Local backups
+*.bak
+*.backup
