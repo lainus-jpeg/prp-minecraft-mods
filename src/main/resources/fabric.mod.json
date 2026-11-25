@@ -1,38 +1,41 @@
+
 {
-	"schemaVersion": 1,
-	"id": "gamingsecuritylab",
-	"version": "${version}",
-	"name": "Gaming Security Lab",
-	"description": "This is an example description! Tell everyone what your mod is about!",
-	"authors": [
-		"Me!"
-	],
-	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
-	},
-	"license": "CC0-1.0",
-	"icon": "assets/gamingsecuritylab/icon.png",
-	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"com.prp.gamingsecuritylab.GamingSecurityLab"
-		],
-		"client": [
-			"com.prp.gamingsecuritylab.client.GamingSecurityLabClient"
-		]
-	},
-	"mixins": [
-		"gamingsecuritylab.mixins.json",
-		{
-			"config": "gamingsecuritylab.client.mixins.json",
-			"environment": "client"
-		}
-	],
-	"depends": {
-		"fabricloader": ">=0.20.1",
-		"minecraft": "~26.2",
-		"java": ">=25",
-		"fabric-api": "*"
-	}
+  "schemaVersion": 1,
+  "id": "gamingsecuritylab",
+  "version": "${version}",
+  "name": "Gaming Security Lab",
+  "description": "Minecraft gaming security research",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/lainus-jpeg/prp-minecraft-mods"
+  },
+  "license": "CC0-1.0",
+  "icon": "assets/gamingsecuritylab/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.prp.gamingsecuritylab.GamingSecurityLab"
+    ],
+    "client": [
+      "com.prp.gamingsecuritylab.client.GamingSecurityLabClient",
+      "com.prp.gamingsecuritylab.client.SessionTestClient",
+      "com.prp.gamingsecuritylab.client.PrismAccountTestClient"
+    ]
+  },
+  "mixins": [
+    "gamingsecuritylab.mixins.json",
+    {
+      "config": "gamingsecuritylab.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.20.1",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
 }
